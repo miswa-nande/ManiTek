@@ -49,7 +49,7 @@ function loadEnergyData() {
                 solarPanelStatus: 'Operational',
                 solarEnergyCollected: 10.8,
                 batteryEnergyUsed: 9.2,
-                solarVsBatteryUsage: '54% / 46%'
+                solarVsBatteryUsage: '54% / 46%' ,
             },
             {
                 date: '2025-04-27',
@@ -92,6 +92,7 @@ function displayEnergyData(data) {
             <td>${item.solarEnergyCollected} kWh</td>
             <td>${item.batteryEnergyUsed} kWh</td>
             <td>${item.solarVsBatteryUsage}</td>
+            <td>${item.solarVsBatteryUsage}</td>
         `;
         tableBody.appendChild(row);
     });
@@ -102,6 +103,7 @@ function displayEnergyData(data) {
         const emptyRow = document.createElement('tr');
         emptyRow.classList.add('empty-row');
         emptyRow.innerHTML = `
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
