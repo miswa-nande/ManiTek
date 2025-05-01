@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 0;
+    background-color: #f9f2e8;
+    overflow-y: auto;
+}
+
+.controls-section {
+    margin: 15px;
+}
+
+.control-header {
+    background-color: #8B4513;
+    color: white;
+    padding: 8px 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-start {
+    background-color: #4CAF50;
+}
+
+.btn-pause {
+    background-color: #FFCC00;
+    color: black;
+}
+
+.btn-stop {
+    background-color: #F44336;
+}
+
+.btn svg {
+    margin-right: 5px;
+}
+
+.table-wrapper {
+    margin: 15px;
+    width: calc(100% - 30px);
+}
+
+table {
+    height: auto;
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+th {
+    background-color: #8B4513;
+    color: white;
+    text-align: left;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+}
+
+td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .container {
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    .main-content {
+        width: 65%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .page-title {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .control-buttons {
+        flex-wrap: wrap;
+    }
+
+    .control-buttons {
+        flex-wrap: wrap;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 11px 6px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .table-wrapper {
+        width: calc(100% - 20px);
+    }
+
+    .control-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+}

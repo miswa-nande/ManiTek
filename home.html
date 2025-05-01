@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manitek Home Page</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/side_and_top_bar.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <header class="header">
+                <div class="logo">
+                    <img src="Images/ManiTek.png" alt="ManiTek Logo">
+                </div>
+            </header>
+            <nav class="nav-menu">
+                <a href="home.html" class="nav-item active">Dashboard</a>
+                <a href="production.html" class="nav-item">Production</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-item dropdown-toggle">Reports</a>
+                    <div class="dropdown-content">
+                        <a href="batch-production-report.html" class="dropdown-item">Batch Production Report</a>
+                        <a href="effeciency-report.html" class="dropdown-item">Effeciency Report</a>
+                        <a href="weekly-monthly-summary.html" class="dropdown-item">Weekly/Monthly Summary</a>
+                        <a href="user-activity-report.html" class="dropdown-item">User Activity Report</a>
+                        <a href="error-alert-report.html" class="dropdown-item">Error/Alert Report</a>
+                        <a href="defect-analysis-report.html" class="dropdown-item">Defect Analysis Report</a>
+                        <a href="batch-processing-report.html" class="dropdown-item">Batch Processing Report</a>
+                        <a href="energy-report.html" class="dropdown-item">Energy Report</a>
+                    </div>
+                </div>
+                <a href="hardware.html" class="nav-item">Hardware Management</a>
+            </nav>
+
+            <div class="logout-container">
+                <button class="logout-btn">Log-out</button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <div class="top-bar">
+                <div class="user-controls">
+                    <button onclick="window.location.href='notification.html'" class="notification-btn">
+                        <img src="Images/notification.png" alt="Notifications">
+                    </button>
+                    <button onclick="window.location.href='profile.html'" class="profile-btn">
+                        <img src="Images/profile-picture.png" alt="Profile">
+                    </button>
+                </div>
+            </div>
+
+            <div class="status-bar">
+                <div class="status-indicator">
+                    <div class="status-icon">
+
+                    </div>
+                    <div class="status-text">
+                        <span class="status-label">STATUS:</span>
+                        <span class="status-value">Device Connected</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="page-title"> Dashboard </h2>
+
+            <div class="content-section">
+                <div class="section-header inventory-header">
+                    <h3>Inventory Overview</h3>
+                </div>
+
+                <div class="inventory-chart">
+                    <div class="chart-column">
+                        <div class="chart-bar small"></div>
+                        <div class="chart-label">Small</div>
+                    </div>
+                    <div class="chart-column">
+                        <div class="chart-bar medium"></div>
+                        <div class="chart-label">Medium</div>
+                    </div>
+                    <div class="chart-column">
+                        <div class="chart-bar large"></div>
+                        <div class="chart-label">Large</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="section-header table-header">
+                    <h3>Table Summary</h3>
+                </div>
+
+                <table class="inventory-table">
+                    <thead>
+                        <tr>
+                            <th>Size</th>
+                            <th>Qty</th>
+                            <th>Kilo</th>
+                            <th>No. of Peanut</th>
+                            <th>Price/kg</th>
+                            <th>Total Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="javascripts/reports_dropdown.js"></script>
+</body>
+
+</html>

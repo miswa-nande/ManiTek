@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manitek Home Page</title>
+    <link rel="stylesheet" href="css/hardware.css">
+    <link rel="stylesheet" href="css/side_and_top_bar.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <header class="header">
+                <div class="logo">
+                    <img src="Images/ManiTek.png" alt="ManiTek Logo">
+                </div>
+            </header>
+
+            <nav class="nav-menu">
+                <a href="home.html" class="nav-item active">Dashboard</a>
+                <a href="production.html" class="nav-item">Production</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-item dropdown-toggle">Reports</a>
+                    <div class="dropdown-content">
+                        <a href="batch-production-report.html" class="dropdown-item">Batch Production Report</a>
+                        <a href="effeciency-report.html" class="dropdown-item">Effeciency Report</a>
+                        <a href="weekly-monthly-summary.html" class="dropdown-item">Weekly/Monthly Summary</a>
+                        <a href="user-activity-report.html" class="dropdown-item">User Activity Report</a>
+                        <a href="error-alert-report.html" class="dropdown-item">Error/Alert Report</a>
+                        <a href="defect-analysis-report.html" class="dropdown-item">Defect Analysis Report</a>
+                        <a href="batch-processing-report.html" class="dropdown-item">Batch Processing Report</a>
+                        <a href="energy-report.html" class="dropdown-item">Energy Report</a>
+                    </div>
+                </div>
+                <a href="hardware.html" class="nav-item">Hardware Management</a>
+            </nav>
+
+            <div class="logout-container">
+                <button class="logout-btn">Log-out</button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <div class="top-bar">
+                <div class="user-controls">
+                    <button onclick="window.location.href='notification.html'" class="notification-btn">
+                        <img src="Images/notification.png" alt="Notifications">
+                    </button>
+                    <button onclick="window.location.href='profile.html'" class="profile-btn">
+                        <img src="Images/profile-picture.png" alt="Profile">
+                    </button>
+                </div>
+            </div>
+
+            <h2 class="page-title"> Hardware Management </h2>
+
+            <div class="controls-section">
+                <div class="control-header">Machine Controls:</div>
+                <div class="control-buttons">
+                    <button class="btn btn-start">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                            <polygon points="2,2 10,6 2,10"></polygon>
+                        </svg>
+                        Start
+                    </button>
+                    <button class="btn btn-pause">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                            <rect x="2" y="2" width="3" height="8"></rect>
+                            <rect x="7" y="2" width="3" height="8"></rect>
+                        </svg>
+                        Pause
+                    </button>
+                    <button class="btn btn-stop">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                            <rect x="2" y="2" width="8" height="8"></rect>
+                        </svg>
+                        Stop
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Status</th>
+                            <th>Connection</th>
+                            <th>Configuration</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Battery</td>
+                            <td>Active</td>
+                            <td>Connected</td>
+                            <td>Charging 85%</td>
+                            <td>Charging, 87%</td>
+                        </tr>
+                        <tr>
+                            <td>Arduino Mega 2560</td>
+                            <td>Active</td>
+                            <td>Connected via USB/Serial</td>
+                            <td>Running - 85% Memory Usage</td>
+                            <td>Stable operation</td>
+                        </tr>
+                        <tr>
+                            <td>Vibration Motor</td>
+                            <td>Idle</td>
+                            <td>Digital Output</td>
+                            <td>Power: OFF</td>
+                            <td>Used when needed</td>
+                        </tr>
+                        <tr>
+                            <td>TCS3200 Color Sensor</td>
+                            <td>Active</td>
+                            <td>Digital Output</td>
+                            <td>Calibrated - Detecting Light Brown</td>
+                            <td>For quality sorting</td>
+                        </tr>
+                        <tr>
+                            <td>Relay Module</td>
+                            <td>Standby</td>
+                            <td>Digital Output</td>
+                            <td>Channel 1 ON - Cracker Motor Active</td>
+                            <td>Auto-switching</td>
+                        </tr>
+                        <tr>
+                            <td>SD Card Module</td>
+                            <td>Ready</td>
+                            <td>SPI</td>
+                            <td>Free Space: 1.2GB - Logging Enabled</td>
+                            <td>Logs daily stats</td>
+                        </tr>
+                        <tr>
+                            <td>Solar Panel</td>
+                            <td>Charging</td>
+                            <td>DC In</td>
+                            <td>Voltage: 12.4V - Output Stable</td>
+                            <td>Backup power source</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="javascripts/reports_dropdown.js"></script>
+</body>
+
+</html>

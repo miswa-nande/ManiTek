@@ -1,0 +1,209 @@
+.sidebar {
+    width: 200px;
+    background-color: #d8b9a4;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #5c2c06;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #FFFF;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    max-width: 100%;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.nav-item {
+    padding: 20px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-item.active {
+    background-color: rgba(92, 44, 6, 0.2);
+    font-weight: 1000;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #f9e7d9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-item {
+    color: #8b4513;
+    /* Brown color matching your theme */
+    padding: 15px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-item:hover {
+    background-color: #f5dfc4;
+    overflow: hidden;
+}
+
+/* Optional: Add a small arrow indicator */
+.dropdown-toggle::after {
+    content: " ▼";
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.logout-container {
+    padding: 15px;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #5c2c06;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: #4a2305;
+}
+
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #5c2c06;
+}
+
+.page-title {
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.user-controls {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+    /* This pushes the container to the right */
+}
+
+.notification-btn,
+.profile-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.notification-btn img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.profile-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Page title */
+.page-title {
+    background-color: #FEF3E2;
+    color: #000000;
+    padding: 20px 25px;
+    margin-bottom: -20px;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 26%;
+        min-width: 120px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        overflow-y: auto;
+        flex-grow: 1;
+        padding: 10px 0;
+    }
+
+    .nav-item {
+        padding: 15px 10px;
+        text-align: left;
+    }
+
+    .logout-container {
+        padding: 10px;
+        margin-top: auto;
+    }
+
+    .main-content {
+        width: 65%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .page-title {
+        font-size: 20px;
+        padding: 15px;
+        margin-bottom: -10;
+    }
+
+    .logo img {
+        width: 100%;
+        max-width: 180px;
+    }
+}

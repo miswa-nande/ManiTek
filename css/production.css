@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 0;
+    background-color: #f9f2e8;
+    overflow-y: auto;
+}
+
+/* Section styles */
+.section {
+    margin: 15px;
+    margin-bottom: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(150, 75, 0, 0.1);
+}
+
+.section-header {
+    background-color: #964B00;
+    color: white;
+    border-radius: 8px 8px 0 0;
+    padding: 12px 15px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+}
+
+.machine-icon {
+    flex-shrink: 0;
+}
+
+.roaster-image {
+    width: 150px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    object-fit: contain;
+}
+
+/* Status box styles */
+.status-box {
+    text-align: center;
+    margin: 0 16px;
+    flex: 1;
+    max-width: 150px;
+}
+
+.status-label {
+    color: #964B00;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.status-value {
+    background-color: #964B00;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.25rem;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Price settings styles */
+.price-settings {
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(150, 75, 0, 0.1);
+}
+
+.price-label {
+    background-color: #964B00;
+    color: white;
+    padding: 10px 15px;
+    margin-right: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.price-slider {
+    flex-grow: 1;
+    height: 8px;
+    background-color: #e6d2bc;
+    border-radius: 4px;
+    margin: 0 15px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.price-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #964B00;
+    cursor: pointer;
+}
+
+.price-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #964B00;
+    cursor: pointer;
+    border: none;
+}
+
+.apply-button {
+    background-color: #22c55e;
+    color: white;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+    background-color: #1ca14b;
+}
+
+/* Production table styles */
+.table-container {
+    margin: 15px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(150, 75, 0, 0.1);
+}
+
+.production-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.production-table th {
+    background-color: #964B00;
+    color: white;
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.production-table td {
+    border: 1px solid #e6d2bc;
+    padding: 12px 8px;
+    text-align: center;
+    height: 50px;
+}
+
+.production-table tr:nth-child(even) {
+    background-color: #faf5ef;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .container {
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    .main-content {
+        width: 65%;
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    .status-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .status-box {
+        max-width: 100%;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .price-settings {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .price-label {
+        margin-right: 0;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+
+    .inventory-chart {
+        height: 150px;
+        padding: 10px;
+    }
+
+    .chart-column {
+        width: 60px;
+    }
+
+    .chart-bar {
+        width: 60px;
+    }
+
+    .inventory-table th,
+    .inventory-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .price-slider {
+        margin: 15px 0;
+    }
+
+    .apply-button {
+        align-self: flex-end;
+    }
+
+    .production-table {
+        font-size: 0.9rem;
+    }
+
+    .production-table th,
+    .production-table td {
+        padding: 8px 6px;
+    }
+
+    .roaster-image {
+        width: 100%;
+        max-width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .production-table {
+        font-size: 0.8rem;
+    }
+
+    .production-table th,
+    .production-table td {
+        padding: 6px 4px;
+    }
+}

@@ -1,0 +1,285 @@
+Request received: 2025-04-28 16:16:02
+Register request received: {"fullName":"treyyyy","password":"admin123","username":"try","email":"try@gmail.com"}
+Request received: 2025-04-28 16:17:09
+Login attempt: {"username":"try","password":"admin123"}
+Query: SELECT * FROM user WHERE Username = ? with value: try
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:17:10
+Login attempt: {"username":"try","password":"admin123"}
+Query: SELECT * FROM user WHERE Username = ? with value: try
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:17:15
+Login attempt: {"username":"try","password":"admin123"}
+Query: SELECT * FROM user WHERE Username = ? with value: try
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:17:40
+Register request received: {"fullName":"testingg","password":"Nakakaumaytalaga","username":"JcElevado","email":"JcElevado@gmail.com"}
+Request received: 2025-04-28 16:17:51
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:17:52
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:17:52
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:17:52
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:17:53
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:17:53
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:17:53
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:17:53
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:24:22
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:24:23
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:24:23
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:24:23
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:24:23
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:24:24
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:24:24
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:24:24
+Login attempt: {"username":"JcElevado","password":"Nakakaumaytalaga"}
+Query: SELECT * FROM user WHERE Username = ? with value: JcElevado
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:24:57
+Register request received: {"fullName":"afsdasfafd","password":"admin123","email":"jppogi@gmail.com","username":"jppogi"}
+Request received: 2025-04-28 16:25:11
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:12
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:12
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:12
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:13
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:13
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:13
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:13
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:14
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:15
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:16
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:16
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:17
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:18
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:19
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:20
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:25:22
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:29:47
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:29:48
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:29:49
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:29:49
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:29:49
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:29:49
+Login attempt: {"username":"jppogi@gmail.com","password":"admin123"}
+Query: SELECT * FROM user WHERE Email = ? with value: jppogi@gmail.com
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:30:06
+Register request received: {"fullName":"sadadasdasdas","password":"tae123","username":"text","email":"text@gmail.com"}
+Request received: 2025-04-28 16:30:14
+Login attempt: {"username":"text","password":"tae123"}
+Query: SELECT * FROM user WHERE Username = ? with value: text
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:34:08
+Register request received: {"fullName":"asaadasgsg","password":"jean123","username":"jean","email":"jean@gmail.com"}
+Request received: 2025-04-28 16:34:16
+Login attempt: {"username":"jean","password":"jean123"}
+Query: SELECT * FROM user WHERE LOWER(Username) = LOWER(?) with value: jean
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:34:18
+Login attempt: {"username":"jean","password":"jean123"}
+Query: SELECT * FROM user WHERE LOWER(Username) = LOWER(?) with value: jean
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:34:18
+Login attempt: {"username":"jean","password":"jean123"}
+Query: SELECT * FROM user WHERE LOWER(Username) = LOWER(?) with value: jean
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:34:18
+Login attempt: {"username":"jean","password":"jean123"}
+Query: SELECT * FROM user WHERE LOWER(Username) = LOWER(?) with value: jean
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:34:18
+Login attempt: {"username":"jean","password":"jean123"}
+Query: SELECT * FROM user WHERE LOWER(Username) = LOWER(?) with value: jean
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:34:18
+Login attempt: {"username":"jean","password":"jean123"}
+Query: SELECT * FROM user WHERE LOWER(Username) = LOWER(?) with value: jean
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:34:18
+Login attempt: {"username":"jean","password":"jean123"}
+Query: SELECT * FROM user WHERE LOWER(Username) = LOWER(?) with value: jean
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:34:19
+Login attempt: {"username":"jean","password":"jean123"}
+Query: SELECT * FROM user WHERE LOWER(Username) = LOWER(?) with value: jean
+User found: Yes
+Password match: No
+Request received: 2025-04-28 16:40:46
+Login attempt: {"username":"jean","password":"jean123"}
+Query: SELECT * FROM user WHERE LOWER(Username) = LOWER(?) with value: jean
+User found: Yes
+Stored hash: $2y$10$sHV/DFF3.uqqhh8uwAGfYukF5adz0ogD.NutcUiQPbX
+Provided password: jean123
+Password_verify result: No
+Normal password_verify failed
+Rehashed password: $2y$10$MnzXiXpxvSzlFYG/Qikpme.mKXeGqfKcVSLpXQQMGxmPfaM/JvxKa
+Password can be properly hashed and verified
+MD5 check: No
+Request received: 2025-04-28 16:45:37
+Register request received: {"fullName":"Jp Elevado","password":"jppogi125","username":"JpElevado","email":"JpElevado@gmail.com"}
+Request received: 2025-04-28 16:45:49
+Login attempt: {"username":"JpElevado","password":"jppogi125"}
+Query: SELECT * FROM user WHERE LOWER(Username) = LOWER(?) with value: JpElevado
+User found: Yes - UserID: 11
+Password attempt for user: JpElevado
+Standard password_verify result: Failed
+FORCING LOGIN FOR TESTING - Password in DB: $2y$10$QK5cV1IwJvHAVyXJrWnmmO9LN7BG8LtrZx8.jwPdbyy

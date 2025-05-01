@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ManiTek Login</title>
+  <link rel="stylesheet" href="css/Login.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="Images/ManiTek.png" alt="ManiTek Logo">
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="login-container">
+      <h2>Login</h2>
+      <!-- Add message container here -->
+      <div class="message-container" style="display: none;"></div>
+      <form id="loginForm">
+        <div class="input-group">
+          <input type="text" id="username" name="username" placeholder="Username or Email" required>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="forgot-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="login-button">Login</button>
+      </form>
+      <p class="signup-text">Don't have an account? <a href="SignUp.html">Sign Up</a></p>
+    </div>
+  </main>
+  <script src="javascripts/login.js"></script>
+</body>
+
+</html>
