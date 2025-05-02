@@ -1,29 +1,29 @@
-// Energy Report JavaScript
+// Defect Analysis Report JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize the report
-    initializeEnergyReport();
+    initializeDefectReport();
     
     // Set up event listeners
     document.getElementById('exportBtn').addEventListener('click', exportReport);
 });
 
-// Initialize the energy report
-function initializeEnergyReport() {
-    // Load energy data
-    loadEnergyData();
+// Initialize the defect report
+function initializeDefectReport() {
+    // Load defect data
+    loadDefectData();
     
     // You could also add filter controls, date pickers, etc. here
 }
 
-// Load energy data from the database
-function loadEnergyData() {
-    const tableBody = document.querySelector('#energyReportTable tbody');
+// Load defect data from the database
+function loadDefectData() {
+    const tableBody = document.querySelector('#defectReportTable tbody');
     
     // Show loading indicator
     tableBody.innerHTML = `
         <tr>
-            <td colspan="6" class="loading-indicator">Loading energy data...</td>
+            <td colspan="5" class="loading-indicator">Loading defect analysis data...</td>
         </tr>
     `;
     
@@ -34,41 +34,45 @@ function loadEnergyData() {
         // Replace with actual API call in production
         
         // Sample data - replace with your database call
-        const energyData = [
+        const defectData = [
             {
                 date: '2025-04-25',
-                batteryLevel: 85,
-                solarPanelStatus: 'Operational',
-                solarEnergyCollected: 12.5,
-                batteryEnergyUsed: 8.3,
-                solarVsBatteryUsage: '60% / 40%'
+                defectType: 'Discoloration',
+                defectPercentage: 5.2,
+                affectedBatchNumber: 'B-10045',
+                totalDefectiveCount: 156
             },
             {
                 date: '2025-04-26',
-                batteryLevel: 78,
-                solarPanelStatus: 'Operational',
-                solarEnergyCollected: 10.8,
-                batteryEnergyUsed: 9.2,
-                solarVsBatteryUsage: '54% / 46%'
+                defectType: 'Undersized',
+                defectPercentage: 3.8,
+                affectedBatchNumber: 'B-10046',
+                totalDefectiveCount: 114
             },
             {
                 date: '2025-04-27',
-                batteryLevel: 62,
-                solarPanelStatus: 'Reduced Output',
-                solarEnergyCollected: 5.4,
-                batteryEnergyUsed: 11.7,
-                solarVsBatteryUsage: '32% / 68%'
+                defectType: 'Shell Fragments',
+                defectPercentage: 4.5,
+                affectedBatchNumber: 'B-10047',
+                totalDefectiveCount: 135
+            },
+            {
+                date: '2025-04-28',
+                defectType: 'Mold',
+                defectPercentage: 1.2,
+                affectedBatchNumber: 'B-10048',
+                totalDefectiveCount: 36
             }
             // Add more data as needed
         ];
         
-        displayEnergyData(energyData);
+        displayDefectData(defectData);
     }, 500);
 }
 
-// Display energy data in the table
-function displayEnergyData(data) {
-    const tableBody = document.querySelector('#energyReportTable tbody');
+// Display defect data in the table
+function displayDefectData(data) {
+    const tableBody = document.querySelector('#defectReportTable tbody');
     
     // Clear the table first
     tableBody.innerHTML = '';
@@ -76,7 +80,7 @@ function displayEnergyData(data) {
     if (data.length === 0) {
         tableBody.innerHTML = `
             <tr>
-                <td colspan="6" style="text-align: center; padding: 20px;">No energy data available</td>
+                <td colspan="5" style="text-align: center; padding: 20px;">No defect data available</td>
             </tr>
         `;
         return;
@@ -87,11 +91,10 @@ function displayEnergyData(data) {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${formatDate(item.date)}</td>
-            <td>${item.batteryLevel}%</td>
-            <td>${item.solarPanelStatus}</td>
-            <td>${item.solarEnergyCollected} kWh</td>
-            <td>${item.batteryEnergyUsed} kWh</td>
-            <td>${item.solarVsBatteryUsage}</td>
+            <td>${item.defectType}</td>
+            <td>${item.defectPercentage}%</td>
+            <td>${item.affectedBatchNumber}</td>
+            <td>${item.totalDefectiveCount}</td>
         `;
         tableBody.appendChild(row);
     });
@@ -102,7 +105,6 @@ function displayEnergyData(data) {
         const emptyRow = document.createElement('tr');
         emptyRow.classList.add('empty-row');
         emptyRow.innerHTML = `
-            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -122,7 +124,7 @@ function formatDate(dateString) {
 // Export report functionality
 function exportReport() {
     // Show export in progress
-    alert('Exporting energy report...');
+    alert('Exporting defect analysis report...');
     
     // In a real application, you would implement proper export functionality here
     // Options include:
@@ -132,7 +134,7 @@ function exportReport() {
     
     // Example implementation for server-side export might look like:
     /*
-    fetch('/api/reports/energy/export', {
+    fetch('/api/reports/defects/export', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -149,7 +151,7 @@ function exportReport() {
         const a = document.createElement('a');
         a.style.display = 'none';
         a.href = url;
-        a.download = 'energy-report.pdf';
+        a.download = 'defect-analysis-report.pdf';
         document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);

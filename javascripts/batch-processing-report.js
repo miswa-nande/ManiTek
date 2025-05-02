@@ -1,29 +1,29 @@
-// Energy Report JavaScript
+// Batch Processing Report JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize the report
-    initializeEnergyReport();
+    initializeBatchReport();
     
     // Set up event listeners
     document.getElementById('exportBtn').addEventListener('click', exportReport);
 });
 
-// Initialize the energy report
-function initializeEnergyReport() {
-    // Load energy data
-    loadEnergyData();
+// Initialize the batch processing report
+function initializeBatchReport() {
+    // Load batch data
+    loadBatchData();
     
     // You could also add filter controls, date pickers, etc. here
 }
 
-// Load energy data from the database
-function loadEnergyData() {
-    const tableBody = document.querySelector('#energyReportTable tbody');
+// Load batch data from the database
+function loadBatchData() {
+    const tableBody = document.querySelector('#batchReportTable tbody');
     
     // Show loading indicator
     tableBody.innerHTML = `
         <tr>
-            <td colspan="6" class="loading-indicator">Loading energy data...</td>
+            <td colspan="5" class="loading-indicator">Loading batch data...</td>
         </tr>
     `;
     
@@ -34,41 +34,41 @@ function loadEnergyData() {
         // Replace with actual API call in production
         
         // Sample data - replace with your database call
-        const energyData = [
+        const batchData = [
             {
+                batchNumber: 'B001',
                 date: '2025-04-25',
-                batteryLevel: 85,
-                solarPanelStatus: 'Operational',
-                solarEnergyCollected: 12.5,
-                batteryEnergyUsed: 8.3,
-                solarVsBatteryUsage: '60% / 40%'
+                totalPeanuts: 1250,
+                defectivePeanuts: 18,
+                processingTime: 45,
+                packagingTime: 30
             },
             {
+                batchNumber: 'B002',
                 date: '2025-04-26',
-                batteryLevel: 78,
-                solarPanelStatus: 'Operational',
-                solarEnergyCollected: 10.8,
-                batteryEnergyUsed: 9.2,
-                solarVsBatteryUsage: '54% / 46%'
+                totalPeanuts: 1350,
+                defectivePeanuts: 22,
+                processingTime: 50,
+                packagingTime: 35
             },
             {
+                batchNumber: 'B003',
                 date: '2025-04-27',
-                batteryLevel: 62,
-                solarPanelStatus: 'Reduced Output',
-                solarEnergyCollected: 5.4,
-                batteryEnergyUsed: 11.7,
-                solarVsBatteryUsage: '32% / 68%'
+                totalPeanuts: 1200,
+                defectivePeanuts: 15,
+                processingTime: 42,
+                packagingTime: 28
             }
             // Add more data as needed
         ];
         
-        displayEnergyData(energyData);
+        displayBatchData(batchData);
     }, 500);
 }
 
-// Display energy data in the table
-function displayEnergyData(data) {
-    const tableBody = document.querySelector('#energyReportTable tbody');
+// Display batch data in the table
+function displayBatchData(data) {
+    const tableBody = document.querySelector('#batchReportTable tbody');
     
     // Clear the table first
     tableBody.innerHTML = '';
@@ -76,7 +76,7 @@ function displayEnergyData(data) {
     if (data.length === 0) {
         tableBody.innerHTML = `
             <tr>
-                <td colspan="6" style="text-align: center; padding: 20px;">No energy data available</td>
+                <td colspan="5" style="text-align: center; padding: 20px;">No batch processing data available</td>
             </tr>
         `;
         return;
@@ -86,12 +86,12 @@ function displayEnergyData(data) {
     data.forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
+            <td>${item.batchNumber}</td>
             <td>${formatDate(item.date)}</td>
-            <td>${item.batteryLevel}%</td>
-            <td>${item.solarPanelStatus}</td>
-            <td>${item.solarEnergyCollected} kWh</td>
-            <td>${item.batteryEnergyUsed} kWh</td>
-            <td>${item.solarVsBatteryUsage}</td>
+            <td>${item.totalPeanuts} kg</td>
+            <td>${item.defectivePeanuts} (${((item.defectivePeanuts/item.totalPeanuts)*100).toFixed(1)}%)</td>
+            <td>${item.processingTime} min</td>
+            <td>${item.packagingTime} min</td>
         `;
         tableBody.appendChild(row);
     });
@@ -122,7 +122,7 @@ function formatDate(dateString) {
 // Export report functionality
 function exportReport() {
     // Show export in progress
-    alert('Exporting energy report...');
+    alert('Exporting batch processing report...');
     
     // In a real application, you would implement proper export functionality here
     // Options include:
@@ -132,7 +132,7 @@ function exportReport() {
     
     // Example implementation for server-side export might look like:
     /*
-    fetch('/api/reports/energy/export', {
+    fetch('/api/reports/batch/export', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -149,7 +149,7 @@ function exportReport() {
         const a = document.createElement('a');
         a.style.display = 'none';
         a.href = url;
-        a.download = 'energy-report.pdf';
+        a.download = 'batch-processing-report.pdf';
         document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);

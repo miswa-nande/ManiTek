@@ -1,29 +1,27 @@
-// Energy Report JavaScript
-
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize the report
-    initializeEnergyReport();
+    initializeBatchProductionReport();
     
     // Set up event listeners
     document.getElementById('exportBtn').addEventListener('click', exportReport);
 });
 
 // Initialize the energy report
-function initializeEnergyReport() {
+function initializeBatchProductionReport() {
     // Load energy data
-    loadEnergyData();
+    loadBatchProductionData();
     
     // You could also add filter controls, date pickers, etc. here
 }
 
 // Load energy data from the database
-function loadEnergyData() {
+function loadBatchProductionData() {
     const tableBody = document.querySelector('#energyReportTable tbody');
     
     // Show loading indicator
     tableBody.innerHTML = `
         <tr>
-            <td colspan="6" class="loading-indicator">Loading energy data...</td>
+            <td colspan="7" class="loading-indicator">Loading energy data...</td>
         </tr>
     `;
     
@@ -34,40 +32,24 @@ function loadEnergyData() {
         // Replace with actual API call in production
         
         // Sample data - replace with your database call
-        const energyData = [
+        const batchProductionData = [
             {
-                date: '2025-04-25',
-                batteryLevel: 85,
-                solarPanelStatus: 'Operational',
-                solarEnergyCollected: 12.5,
-                batteryEnergyUsed: 8.3,
-                solarVsBatteryUsage: '60% / 40%'
-            },
-            {
-                date: '2025-04-26',
-                batteryLevel: 78,
-                solarPanelStatus: 'Operational',
-                solarEnergyCollected: 10.8,
-                batteryEnergyUsed: 9.2,
-                solarVsBatteryUsage: '54% / 46%' ,
-            },
-            {
-                date: '2025-04-27',
-                batteryLevel: 62,
-                solarPanelStatus: 'Reduced Output',
-                solarEnergyCollected: 5.4,
-                batteryEnergyUsed: 11.7,
-                solarVsBatteryUsage: '32% / 68%'
+                dateAndtime: '2025-04-25 04:25:05',
+                defectivePeanuts: 5,
+                goodPeanuts: 95,
+                peanutSize: 'Medium',
+                packedPeanutsYield: 25,
+                avgProcessingTime: '45 min',
+                Income: '₱2275' 
             }
-            // Add more data as needed
         ];
         
-        displayEnergyData(energyData);
+        displayBatchProduction(batchProductionData);
     }, 500);
 }
 
 // Display energy data in the table
-function displayEnergyData(data) {
+function displayBatchProduction(data) {
     const tableBody = document.querySelector('#energyReportTable tbody');
     
     // Clear the table first
@@ -76,7 +58,7 @@ function displayEnergyData(data) {
     if (data.length === 0) {
         tableBody.innerHTML = `
             <tr>
-                <td colspan="6" style="text-align: center; padding: 20px;">No energy data available</td>
+                <td colspan="7" style="text-align: center; padding: 20px;">No energy data available</td>
             </tr>
         `;
         return;
@@ -86,13 +68,13 @@ function displayEnergyData(data) {
     data.forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>${formatDate(item.date)}</td>
-            <td>${item.batteryLevel}%</td>
-            <td>${item.solarPanelStatus}</td>
-            <td>${item.solarEnergyCollected} kWh</td>
-            <td>${item.batteryEnergyUsed} kWh</td>
-            <td>${item.solarVsBatteryUsage}</td>
-            <td>${item.solarVsBatteryUsage}</td>
+            <td>${formatDate(item.dateAndtime)}</td>
+            <td>${item.defectivePeanuts}%</td>
+            <td>${item.goodPeanuts}%</td>
+            <td>${item.peanutSize}</td>
+            <td>${item.packedPeanutsYield} kg</td>
+            <td>${item.avgProcessingTime}</td>
+            <td>${item.Income}</td>
         `;
         tableBody.appendChild(row);
     });

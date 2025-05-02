@@ -1,29 +1,29 @@
-// Energy Report JavaScript
+// Peanut Summary Report JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize the report
-    initializeEnergyReport();
+    initializeSummaryReport();
     
     // Set up event listeners
     document.getElementById('exportBtn').addEventListener('click', exportReport);
 });
 
-// Initialize the energy report
-function initializeEnergyReport() {
-    // Load energy data
-    loadEnergyData();
+// Initialize the summary report
+function initializeSummaryReport() {
+    // Load summary data
+    loadSummaryData();
     
     // You could also add filter controls, date pickers, etc. here
 }
 
-// Load energy data from the database
-function loadEnergyData() {
+// Load summary data from the database
+function loadSummaryData() {
     const tableBody = document.querySelector('#energyReportTable tbody');
     
     // Show loading indicator
     tableBody.innerHTML = `
         <tr>
-            <td colspan="6" class="loading-indicator">Loading energy data...</td>
+            <td colspan="8" class="loading-indicator">Loading peanut summary data...</td>
         </tr>
     `;
     
@@ -34,40 +34,46 @@ function loadEnergyData() {
         // Replace with actual API call in production
         
         // Sample data - replace with your database call
-        const energyData = [
+        const summaryData = [
             {
-                date: '2025-04-25',
-                batteryLevel: 85,
-                solarPanelStatus: 'Operational',
-                solarEnergyCollected: 12.5,
-                batteryEnergyUsed: 8.3,
-                solarVsBatteryUsage: '60% / 40%'
+                dateRange: 'Apr 1 - Apr 7, 2025',
+                totalProcessed: 1250,
+                totalShelled: 950,
+                defectivePeanuts: 5,
+                goodPeanuts: 95,
+                crackedYield: 875,
+                income: 52500,
+                peakHour: 14
             },
             {
-                date: '2025-04-26',
-                batteryLevel: 78,
-                solarPanelStatus: 'Operational',
-                solarEnergyCollected: 10.8,
-                batteryEnergyUsed: 9.2,
-                solarVsBatteryUsage: '54% / 46%'
+                dateRange: 'Apr 8 - Apr 14, 2025',
+                totalProcessed: 1380,
+                totalShelled: 1050,
+                defectivePeanuts: 4,
+                goodPeanuts: 96,
+                crackedYield: 980,
+                income: 58800,
+                peakHour: 13
             },
             {
-                date: '2025-04-27',
-                batteryLevel: 62,
-                solarPanelStatus: 'Reduced Output',
-                solarEnergyCollected: 5.4,
-                batteryEnergyUsed: 11.7,
-                solarVsBatteryUsage: '32% / 68%'
+                dateRange: 'Apr 15 - Apr 21, 2025',
+                totalProcessed: 1420,
+                totalShelled: 1080,
+                defectivePeanuts: 6,
+                goodPeanuts: 94,
+                crackedYield: 995,
+                income: 59700,
+                peakHour: 15
             }
             // Add more data as needed
         ];
         
-        displayEnergyData(energyData);
+        displaySummaryData(summaryData);
     }, 500);
 }
 
-// Display energy data in the table
-function displayEnergyData(data) {
+// Display summary data in the table
+function displaySummaryData(data) {
     const tableBody = document.querySelector('#energyReportTable tbody');
     
     // Clear the table first
@@ -76,7 +82,7 @@ function displayEnergyData(data) {
     if (data.length === 0) {
         tableBody.innerHTML = `
             <tr>
-                <td colspan="6" style="text-align: center; padding: 20px;">No energy data available</td>
+                <td colspan="8" style="text-align: center; padding: 20px;">No peanut summary data available</td>
             </tr>
         `;
         return;
@@ -86,12 +92,14 @@ function displayEnergyData(data) {
     data.forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>${formatDate(item.date)}</td>
-            <td>${item.batteryLevel}%</td>
-            <td>${item.solarPanelStatus}</td>
-            <td>${item.solarEnergyCollected} kWh</td>
-            <td>${item.batteryEnergyUsed} kWh</td>
-            <td>${item.solarVsBatteryUsage}</td>
+            <td>${item.dateRange}</td>
+            <td>${item.totalProcessed} kg</td>
+            <td>${item.totalShelled} kg</td>
+            <td>${item.defectivePeanuts}%</td>
+            <td>${item.goodPeanuts}%</td>
+            <td>${item.crackedYield} kg</td>
+            <td>₱${item.income.toLocaleString()}</td>
+            <td>${item.peakHour}:00</td>
         `;
         tableBody.appendChild(row);
     });
@@ -108,21 +116,17 @@ function displayEnergyData(data) {
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
         `;
         tableBody.appendChild(emptyRow);
     }
 }
 
-// Helper function to format dates
-function formatDate(dateString) {
-    const options = { year: 'numeric', month: 'short', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('en-US', options);
-}
-
 // Export report functionality
 function exportReport() {
     // Show export in progress
-    alert('Exporting energy report...');
+    alert('Exporting peanut summary report...');
     
     // In a real application, you would implement proper export functionality here
     // Options include:
@@ -132,7 +136,7 @@ function exportReport() {
     
     // Example implementation for server-side export might look like:
     /*
-    fetch('/api/reports/energy/export', {
+    fetch('/api/reports/peanut-summary/export', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -149,7 +153,7 @@ function exportReport() {
         const a = document.createElement('a');
         a.style.display = 'none';
         a.href = url;
-        a.download = 'energy-report.pdf';
+        a.download = 'peanut-summary-report.pdf';
         document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);

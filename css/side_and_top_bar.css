@@ -33,7 +33,8 @@
     flex-direction: column;
     padding: 20px 0;
     flex-grow: 1;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .nav-item {
